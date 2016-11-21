@@ -1,0 +1,69 @@
+<section class='product-top-section'>
+  <div class='product-img'>
+    <img src="{{specificProduct.image}}"/>
+  </div>
+  <div class='product-top-text'>
+    <h1 style='margin-bottom: 25px'>{{specificProduct.title}}</h1>
+    <h4 style='color:#44ACF3; display: flex; flex-direction: row'><p style='margin: 0; padding: 5px '>From:&nbsp&nbsp</p> <p style='font-size: 30px;'>{{specificProduct.price}}</p></h4>
+    <h3>How to Order</h3>
+    <ol type="1">
+      <li type="1">Select from the options below.</li>
+      <li type="1">After checkout, a form will be sent to you.</li>
+      <li type="1"><b>Fill out the order form</b> and send it back to us.</li>
+    </ol>
+    <div class='word-count'>
+      <h6>Word Count</h6>
+      <select id='word-dropdown' ng-model='specificProduct.selectedWord' ng-options='x.option for x in specificProduct.wordCount' ng-change='setWordCount(specificProduct.selectedWord); sumPrices(prices)'>
+        <!-- <option ng-model=''>Choose an option</option> -->
+      </select>
+      <h6> Editing </h6>
+      <select id='word-dropdown' ng-model='specificProduct.selectedEditing' ng-options='x.option for x in specificProduct.editing' ng-change='setEditing(specificProduct.selectedEditing.price); sumPrices(prices)'>
+        <!-- <option value=''>- Choose an option -</option> -->
+      </select>
+    </div>
+    <h4 ng-hide='showAddOns'>Add-On Options</h4>
+    <p ng-hide='showAddOns'>Select from the options below:</p>
+    <div class='add-ons' ng-hide='showAddOns'>
+      <div class='seo'>
+        <h5>SEO Add-Ons</h5>
+        <div class='checkboxes'>
+          <input type="checkbox" name="meta" ng-model='prices.value1' ng-true-value='1' ng-false-value='0' ng-click='sumPrices(prices)'>&nbsp&nbsp Meta Description +$1.00<br>
+
+          <input type="checkbox" name="meta" ng-model='prices.value2'  ng-true-value='0.5' ng-false-value='0' ng-click='sumPrices(prices)'>&nbsp&nbsp Title Tag +$0.50
+        </div>
+    </div>
+    <div class='social'>
+      <h5>Social/Marketing Add-Ons</h5>
+      <div class='checkboxes'>
+        <input type="checkbox" name="meta" ng-model='prices.value3'  ng-true-value='1.5' ng-false-value='0' ng-click='sumPrices(prices)'>&nbsp&nbsp Social Media Post (up to 140 characters) +$1.50<br>
+
+        <input type="checkbox" name="meta" ng-model='prices.value4'  ng-true-value='4' ng-false-value='0' ng-click='sumPrices(prices)'>&nbsp&nbsp Stock Image +$4.00
+      </div>
+    </div>
+    <div class='options-total'>
+      <h5>Option(s) Total</h5>
+      <div style='color: #2E812E'>${{optionsTotal}}</div>
+    </div>
+  </div>
+  <h5>Total</h5>
+  <div style='color: #2E812E'>${{productTotal}}</div>
+  <div class='add-to-cart'>
+    Qty: <input id='product-quantity' type='number' min='1' max='50' ng-model='quantity' ng-value='1'>
+    <button id='add-to-cart-button' ng-click='addCart(specificProduct, specificProduct.selectedWord, specificProduct.selectedEditing, specificProduct.image, productTotal, quantity, prices.value1, prices.value2, prices.value3, prices.value4)'>Add to Cart</button>
+  </div>
+
+</section>
+
+<div class='added-to-cart' ng-show='cartShow'>
+  <p>"{{specificProduct.title}}" has been added to your cart.</p>
+  <button id='view-cart-button' ui-sref='cart'>View Cart</button>
+</div>
+
+<div class='cart-error' ng-show='showError'>
+  <p>Please select Word Count and Editing options.</p>
+</div>
+
+<div class='added-to-cart' ng-show='showPleaseLogin'>
+  <p>Please login to add to cart!</p>
+  <button id='view-cart-button' ui-sref='login'>Login here!</button>
+</div>

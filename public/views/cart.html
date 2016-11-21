@@ -1,0 +1,63 @@
+<section class='cart-section'>
+  <h1 id='cart-h1'>Cart</h1>
+  <div class='cart-item' ng-repeat='cartItem in cart'>
+    <div class='cart-img-div'>
+      <img src="{{cartItem.image}}"/>
+    </div>
+    <div class='cart-content'>
+      <div class='cart-title'>
+        <h4><b>{{cartItem.title}}</b></h4>
+        <p>Price:&nbsp&nbsp ${{cartItem.price}}</p>
+        <!-- <p>Qty:</p> -->
+        <input type='number' min='0' max='50' ng-model='cartItem.quantity' value='{{cartItem.quantity}}'>
+        <button id='update-button' ng-click='changeItemTotal(cartItem.id, cartItem.quantity, cartItem.price)'>Update</button>
+        <h5 ng-model='bigTotal'>Total:&nbsp&nbsp ${{cartItem.bigtotal}}</h5>
+      </div>
+      <div class='cart-services'>
+        <div class='cart-products'>
+          <!-- <h5>Products</h5> -->
+          <ul id='products-ul'>
+            <li class='product-titles'>Word Count</li>
+              <ul>
+                <p class='products-list-item' type="disc">{{cartItem.count}}</p>
+              </ul>
+            <li class='product-titles'>Editing</li>
+              <ul>
+                <p class='products-list-item' type="disc">{{cartItem.edit}}</p>
+              </ul>
+          </ul>
+        </div>
+        <div class='cart-addons'>
+          <!-- <h6>Add-Ons</h6> -->
+          <ul id='products-ul'>
+            <li class='product-titles'>{{cartItem.seo}}</li>
+              <ul>
+                <p class='products-list-item' >{{cartItem.meta}}</p>
+                <p class='products-list-item' >{{cartItem.tag}}</p>
+              </ul>
+            <li class='product-titles'>{{cartItem.social}}</li>
+              <ul>
+                <p class='products-list-item' >{{cartItem.media}}</p>
+                <p class='products-list-item' >{{cartItem.stock}}</p>
+              </ul>
+          </ul>
+        </div>
+      </div>
+      <span id='remove-button' ng-click="deleteCart(cartItem.id)" data-icon="&#xe019">
+    </div>
+  </div>
+  <div id='cart-total' ng-show='totalShow'>
+    <h3>Cart Total:&nbsp&nbsp${{cartSum}}</h3>
+  </div>
+  <div id='checkout-div'>
+    <button ui-sref='checkout_billing' ng-show='checkoutShow'>Checkout</button>
+  </div>
+
+  <div class='cart-empty' ng-show='emptyShow'>
+    <h1> Your cart is empty!</h1>
+    <div class='shop-login'>
+      <button ui-sref='shop'>Shop</button>
+      <button ui-sref='login'>Login</button>
+    </div>
+  </div>
+</section>

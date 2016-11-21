@@ -1,0 +1,36 @@
+<section class='login-section'>
+  <h1 id='checkout-title'>My Account</h1>
+  <div class='forms-container'>
+      <form class="login-form-left">
+        <p>Username or email address <span class='red-asterisk'>*</span></p>
+        <input type="text" ng-model='email'>
+        <p>Password <span class='red-asterisk'>*</span></p>
+        <input type="password" ng-model='password'>
+        <div class='login-div'>
+          <input type='checkbox' id='remember-checkbox'>
+          <span id='remember-me'>Remember me</span>
+          <button id='login-button'  ng-click='login(email, password)'>Login</button>
+          <!-- ng-click='getUser(email, password)' -->
+        </div>
+      </form>
+      <form class="login-form-right">
+        <p>Email address <span class='red-asterisk'>*</span></p>
+        <input type="text" name="name" ng-model='registerEmail'>
+        <p>Password <span class='red-asterisk'>*</span></p>
+        <input type="password" name="name" ng-model='registerPassword'>
+        <button id='register-button' ng-click='addUser(registerEmail, registerPassword)'>Register</button>
+      </form>
+  </div>
+  <p></p>
+  <button ng-click="authenticate('facebook')">Sign in with Facebook</button>
+  <button ng-click="authenticate('google')">Sign in with Google</button>
+  <div class='login-error' ng-show='showLoginError'>
+    <p>Please enter email and password</p>
+  </div>
+  <div class='login-error' ng-show='showUserFound'>
+    <p>User not found!</p>
+  </div>
+  <div class='register-error' ng-show='showRegisterError'>
+    <p>Please enter email and password</p>
+  </div>
+</section>

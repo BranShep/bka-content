@@ -1,0 +1,61 @@
+<section class='checkout-section'>
+  <h1 id='checkout-title'>Checkout</h1>
+  <div class='billing-bar'>
+    <div class='billing' id='billing2'><h3>1. Billing</h3></div>
+    <div class='billing' id='order-info2'><h3>2. Order Info</h3></div>
+    <div class='billing' id='payment-info2'><h3>3. Payment Info</h3></div>
+  </div>
+  <div class='cart-item2' ng-repeat='cartItem in cart'>
+    <div class='cart-img-div'>
+      <img src="{{cartItem.image}}"/>
+    </div>
+    <div class='cart-content'>
+      <div class='cart-title'>
+        <h4><b>{{cartItem.title}}</b></h4>
+        <p>Price:&nbsp&nbsp ${{cartItem.price}}</p>
+        <!-- <p>Qty:</p> -->
+        <input type='number' min='0' max='50' ng-model='cartItem.quantity' value='{{cartItem.quantity}}'>
+        <button id='update-button' ng-click='changeItemTotal(cartItem.id, cartItem.quantity, cartItem.price)'>Update</button>
+        <h5 ng-model='bigTotal'>Total:&nbsp&nbsp ${{cartItem.bigtotal}}</h5>
+      </div>
+      <div class='cart-services'>
+        <div class='cart-products'>
+          <!-- <h5>Products</h5> -->
+          <ul id='products-ul'>
+            <li class='product-titles'>Word Count</li>
+              <ul>
+                <p class='products-list-item' type="disc">{{cartItem.count}}</p>
+              </ul>
+            <li class='product-titles'>Editing</li>
+              <ul>
+                <p class='products-list-item' type="disc">{{cartItem.edit}}</p>
+              </ul>
+          </ul>
+        </div>
+        <div class='cart-addons'>
+          <!-- <h6>Add-Ons</h6> -->
+          <ul id='products-ul'>
+            <li class='product-titles'>SEO Add-Ons</li>
+              <ul>
+                <p class='products-list-item' >{{cartItem.meta}}</p>
+                <p class='products-list-item' >{{cartItem.tag}}</p>
+              </ul>
+            <li class='product-titles'>Social/Marketing Add-Ons</li>
+              <ul>
+                <p class='products-list-item' >{{cartItem.media}}</p>
+                <p class='products-list-item' >{{cartItem.stock}}</p>
+              </ul>
+          </ul>
+        </div>
+      </div>
+      <span id='remove-button' ng-click="deleteCart(cartItem.id)" data-icon="&#xe051">
+    </div>
+  </div>
+  <div id='cart-total'>
+    <h3>Total:&nbsp&nbsp${{cartSum}}</h3>
+  </div>
+  <div class='next-div'>
+      <button id='next-button' ui-sref='checkout_billing'>Previous</button>
+      <button id='next-button' ui-sref='checkout_payment_info'>Next</button>
+  </div>
+</section>

@@ -1,0 +1,154 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-',
+1 verbose cli   'angular-ui-bootstrap' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.6
+4 verbose install initial load of /Users/brandonshepherd/DevMountain/personal-project/package.json
+5 warn package.json personal-project@1.0.0 No description
+6 warn package.json personal-project@1.0.0 No repository field.
+7 warn package.json personal-project@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/animate.css/package.json
+9 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/async/package.json
+10 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/bcryptjs/package.json
+11 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/body-parser/package.json
+12 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/colors/package.json
+13 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/connect-flash/package.json
+14 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/cookie-parser/package.json
+15 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/cors/package.json
+16 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/express/package.json
+17 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/express-handlebars/package.json
+18 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/express-session/package.json
+19 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/express-validator/package.json
+20 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/jwt-simple/package.json
+21 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/massive/package.json
+22 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/moment/package.json
+23 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/mongoose/package.json
+24 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/morgan/package.json
+25 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/passport/package.json
+26 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/passport-local/package.json
+27 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/request/package.json
+28 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/satellizer/package.json
+29 verbose installManyTop reading scoped package data from /Users/brandonshepherd/DevMountain/personal-project/node_modules/wowjs/package.json
+30 verbose readDependencies loading dependencies from /Users/brandonshepherd/DevMountain/personal-project/package.json
+31 silly cache add args [ '-', null ]
+32 verbose cache add spec -
+33 silly cache add args [ 'angular-ui-bootstrap', null ]
+34 verbose cache add spec angular-ui-bootstrap
+35 silly cache add parsed spec Result {
+35 silly cache add   raw: '-',
+35 silly cache add   scope: null,
+35 silly cache add   name: null,
+35 silly cache add   rawSpec: '-',
+35 silly cache add   spec: '/Users/brandonshepherd/DevMountain/personal-project/-',
+35 silly cache add   type: 'local' }
+36 silly cache add parsed spec Result {
+36 silly cache add   raw: 'angular-ui-bootstrap',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'angular-ui-bootstrap',
+36 silly cache add   rawSpec: '',
+36 silly cache add   spec: 'latest',
+36 silly cache add   type: 'tag' }
+37 silly addNamed angular-ui-bootstrap@latest
+38 verbose addNamed "latest" is being treated as a dist-tag for angular-ui-bootstrap
+39 info addNameTag [ 'angular-ui-bootstrap', 'latest' ]
+40 silly mapToRegistry name angular-ui-bootstrap
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry data Result {
+43 silly mapToRegistry   raw: 'angular-ui-bootstrap',
+43 silly mapToRegistry   scope: null,
+43 silly mapToRegistry   name: 'angular-ui-bootstrap',
+43 silly mapToRegistry   rawSpec: '',
+43 silly mapToRegistry   spec: 'latest',
+43 silly mapToRegistry   type: 'tag' }
+44 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-bootstrap
+45 verbose addNameTag registry:https://registry.npmjs.org/angular-ui-bootstrap not in flight; fetching
+46 error addLocal Could not install /Users/brandonshepherd/DevMountain/personal-project/-
+47 verbose request uri https://registry.npmjs.org/angular-ui-bootstrap
+48 verbose request no auth needed
+49 info attempt registry request try #1 at 8:43:45 PM
+50 verbose request id 7d10483d357680cc
+51 http request GET https://registry.npmjs.org/angular-ui-bootstrap
+52 http 200 https://registry.npmjs.org/angular-ui-bootstrap
+53 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+53 verbose headers   etag: '"CHEPJGX7V0Y5DILERHPLEL5B0"',
+53 verbose headers   'content-type': 'application/json',
+53 verbose headers   'content-encoding': 'gzip',
+53 verbose headers   'cache-control': 'max-age=300',
+53 verbose headers   'content-length': '9521',
+53 verbose headers   'accept-ranges': 'bytes',
+53 verbose headers   date: 'Fri, 02 Sep 2016 02:43:46 GMT',
+53 verbose headers   via: '1.1 varnish',
+53 verbose headers   age: '0',
+53 verbose headers   connection: 'keep-alive',
+53 verbose headers   'x-served-by': 'cache-den6025-DEN',
+53 verbose headers   'x-cache': 'MISS',
+53 verbose headers   'x-cache-hits': '0',
+53 verbose headers   'x-timer': 'S1472784226.208318,VS0,VE127',
+53 verbose headers   vary: 'Accept-Encoding' }
+54 silly get cb [ 200,
+54 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+54 silly get     etag: '"CHEPJGX7V0Y5DILERHPLEL5B0"',
+54 silly get     'content-type': 'application/json',
+54 silly get     'content-encoding': 'gzip',
+54 silly get     'cache-control': 'max-age=300',
+54 silly get     'content-length': '9521',
+54 silly get     'accept-ranges': 'bytes',
+54 silly get     date: 'Fri, 02 Sep 2016 02:43:46 GMT',
+54 silly get     via: '1.1 varnish',
+54 silly get     age: '0',
+54 silly get     connection: 'keep-alive',
+54 silly get     'x-served-by': 'cache-den6025-DEN',
+54 silly get     'x-cache': 'MISS',
+54 silly get     'x-cache-hits': '0',
+54 silly get     'x-timer': 'S1472784226.208318,VS0,VE127',
+54 silly get     vary: 'Accept-Encoding' } ]
+55 verbose get saving angular-ui-bootstrap to /Users/brandonshepherd/.npm/registry.npmjs.org/angular-ui-bootstrap/.cache.json
+56 verbose correctMkdir /Users/brandonshepherd/.npm correctMkdir not in flight; initializing
+57 silly addNameTag next cb for angular-ui-bootstrap with tag latest
+58 silly addNamed angular-ui-bootstrap@2.1.3
+59 verbose addNamed "2.1.3" is a plain semver version for angular-ui-bootstrap
+60 silly mapToRegistry name angular-ui-bootstrap
+61 silly mapToRegistry using default registry
+62 silly mapToRegistry registry https://registry.npmjs.org/
+63 silly mapToRegistry data Result {
+63 silly mapToRegistry   raw: 'angular-ui-bootstrap',
+63 silly mapToRegistry   scope: null,
+63 silly mapToRegistry   name: 'angular-ui-bootstrap',
+63 silly mapToRegistry   rawSpec: '',
+63 silly mapToRegistry   spec: 'latest',
+63 silly mapToRegistry   type: 'tag' }
+64 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-bootstrap
+65 verbose addRemoteTarball https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.3.tgz not in flight; adding
+66 verbose addRemoteTarball [ 'https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.3.tgz',
+66 verbose addRemoteTarball   '832f65cd43a4f48adb3c0b2b5fe74a6801d97010' ]
+67 info retry fetch attempt 1 at 8:43:45 PM
+68 info attempt registry request try #1 at 8:43:45 PM
+69 http fetch GET https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.3.tgz
+70 http fetch 200 https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.3.tgz
+71 silly fetchAndShaCheck shasum 832f65cd43a4f48adb3c0b2b5fe74a6801d97010
+72 verbose addTmpTarball /var/folders/jc/vf_ftbgn1l5gdz58sj53bsyw0000gn/T/npm-28747-17c9a15a/registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.1.3.tgz not in flight; adding
+73 verbose addTmpTarball already have metadata; skipping unpack for angular-ui-bootstrap@2.1.3
+74 verbose correctMkdir /Users/brandonshepherd/.npm correctMkdir not in flight; initializing
+75 silly cache afterAdd angular-ui-bootstrap@2.1.3
+76 verbose afterAdd /Users/brandonshepherd/.npm/angular-ui-bootstrap/2.1.3/package/package.json not in flight; writing
+77 verbose correctMkdir /Users/brandonshepherd/.npm correctMkdir not in flight; initializing
+78 verbose afterAdd /Users/brandonshepherd/.npm/angular-ui-bootstrap/2.1.3/package/package.json written
+79 verbose stack Error: ENOENT: no such file or directory, open '/Users/brandonshepherd/DevMountain/personal-project/-'
+79 verbose stack     at Error (native)
+80 verbose cwd /Users/brandonshepherd/DevMountain/personal-project
+81 error Darwin 15.6.0
+82 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-" "angular-ui-bootstrap"
+83 error node v4.4.6
+84 error npm  v2.15.5
+85 error path /Users/brandonshepherd/DevMountain/personal-project/-
+86 error code ENOENT
+87 error errno -2
+88 error syscall open
+89 error enoent ENOENT: no such file or directory, open '/Users/brandonshepherd/DevMountain/personal-project/-'
+89 error enoent This is most likely not a problem with npm itself
+89 error enoent and is related to npm not being able to find a file.
+90 verbose exit [ -2, true ]

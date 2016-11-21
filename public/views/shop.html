@@ -1,0 +1,56 @@
+<section class='macbook-parallax'>
+  <div class='macbook-content'>
+    <h1>Welcome to<br> the Content Shop</h1>
+    <p>
+      You made it! Get ready to experience <b>content<br>
+      creation</b> at its best by selecting from the services<br>
+      below.
+    </p>
+  </div>
+  <div class='shift-down'>
+    <h1 id='circle-down-icon' ng-click='slideDown(".text-bar")'> <span data-icon="&#x3b"></h1>
+  </div>
+
+</section>
+<div class='text-bar'>
+  <p>Need content <b>consistently?</b> Need large <b>volumes</b>? If so, contact us about our <b>Managed Services</b>.</p>
+</div>
+<section class='shop-items'>
+  <div class='item-card-container'>
+    <div class='item-card' ng-repeat='item in items'>
+      <div class='image-div' ui-sref='product({id:item.id})'>
+        <p id='add-button'><span data-icon="&#xe050"></p>
+        <img src='{{item.image}}'/>
+      </div>
+        <h5>{{item.title}}</h3><br>
+        <p>From: {{item.price}}</p>
+    </div>
+  </div>
+</section>
+
+<section class='shop-bottom-section'>
+  <div class="shop-bottom-text">
+    <h1>Here are <b>More</b> Services to Choose From</h1>
+    <p>Take a look at some of the other custom writing services we provide.</p>
+  </div>
+  <div class="shop-bottom-icons">
+      <ul>
+        <li><span data-icon="&#xe100" style='color: #A084B7'>&nbsp &nbsp Ebooks</li>
+        <li><span data-icon="&#xe013" style='color:#DD9933'>&nbsp &nbsp White Papers</li>
+        <li><span data-icon="&#x69" style='color:#90CA76'>&nbsp &nbsp Content Curation</li>
+      </ul>
+      <ul>
+        <li><span data-icon="&#xe101" style='color:#5CB0DB'>&nbsp &nbsp Standalone Editing</li>
+        <li><span data-icon="&#x76" style='color: #A084B7'>&nbsp &nbsp Video Scripts</li>
+        <li><span data-icon="&#xe005" style='color:#DD9933'>&nbsp &nbsp Photo Descriptions</li>
+      </ul>
+      <ul>
+        <li><span data-icon="&#xe007" style='color: #A084B7'>&nbsp &nbsp Custom Content</li>
+        <li><span data-icon="&#x64" style='color:#90CA76'>&nbsp &nbsp Google Answer Box</li>
+        <li><span data-icon="&#xe104" style='color:#5CB0DB'>&nbsp &nbsp And More!</li>
+      </ul>
+  </div>
+  <div class="shop-bottom-button">
+      <button id='quote-button' ui-sref = 'contact'>Get a Quote!</button>
+  </div>
+</section>

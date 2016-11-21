@@ -1,0 +1,45 @@
+<section class='account-section'>
+  <h1 id='checkout-title'>Account Details</h1>
+  <div class='my-account-content'>
+      <ul>
+        <li ui-sref='account'><span class='my-account-content-span'>Dashboard</span></li>
+        <li ui-sref='orders'><span class='my-account-content-span'>Orders</span></li>
+        <li ui-sref='downloads'><span class='my-account-content-span'>Downloads</span></li>
+        <li ui-sref='addresses'><span class='my-account-content-span'>Addresses</span></li>
+        <li ui-sref='account_details'><span class='my-account-content-span'>Account Details</span></li>
+        <li ng-click='logout()'><span class='my-account-content-span'>Logout</span></li>
+      </ul>
+
+  <div class='my-account-text'>
+
+      <form class="details-form" action="index.html" method="post">
+        <p id='first'>First Name <span class='red-asterisk'>*</span></p>
+        <p id='last'>Last Name <span class='red-asterisk'>*</span></p>
+        <div class='details-top'>
+          <input class='details-input-left' type="text" name="name" ng-model='currentFirstName'>
+          <input class='details-input-right' type="text" name="name" ng-model='currentLastName'>
+        </div>
+        <div>
+          <p>Email Address <span class='red-asterisk'>*</span></p>
+          <input class='details-input-full' type="email" name="name" ng-model='currentEmail'>
+        </div>
+        <p style='color: #48AEF3'>Password change</p>
+        <div>
+          <p>Current Password (leave blank to leave unchanged)</p>
+          <input class='details-input-full' type="password" name="name" ng-model='currentPassword'>
+        </div>
+        <div>
+          <p>New Password (leave blank to leave unchanged)</p>
+          <input class='details-input-full' type="password" name="name" ng-model='newPassword'>
+        </div>
+        <div>
+          <p>Confirm New Password</p>
+          <input class='details-input-full' type="password" name="name" ng-model='confirmPassword'>
+        </div>
+      </form>
+        <button class='save-button' ng-click='changeNamePassword(currentFirstName, currentLastName, currentEmail, currentPassword, confirmPassword)'>Save</button>
+        <div class='save-confirmed' ng-show='savedShow'>
+          <p>Name and password saved!</p>
+        </div>
+  </div>
+</section>
